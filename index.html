@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta http-equiv="Content-Language" content="en" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="https://fonts.googleapis.com/css?family=Lato|Roboto:300" rel="stylesheet">
+
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Number Base Converter</title>		
+	</head>
+
+	<body >
+		<header id="header">
+			<h1> Number Base Converter</h1>		
+		</header>
+
+		<div id="basicContainer">
+			<div id="description">
+				<h4>How it works</h4>
+				<p>This tool can convert a number between two custom bases (between 2 and 16).</p>
+				<p id="p2_info">Common bases:</p>
+				<dl>
+					<dt>base 2</dt>
+  					<dd>Binary form</dd>
+  					<dt>base 4</dt>
+ 					<dd>Quaternary form</dd>
+ 					<dt>base 8</dt>
+  					<dd>Octal form</dd>
+  					<dt>base 10</dt>
+  					<dd>Decimal form (common used)</dd>
+  					<dt>base 16</dt>
+ 					<dd>Hexadecimal form (hexa)</dd>
+				</dl>
+			</div>
+
+			<div id="content" class="container" >
+				<legend>
+					This tool converts numbers in different bases (eg: decimal, binary, hexa). 
+				</legend>
+
+				<form name="myForm" action="" method=""> <!-- onchange="validate(this);" -->
+				Number: 
+					<input type="text" id="input_id" name="converted_value" onkeyup="onKeyUp(this.form);" required="">
+				From Base:
+					<select name="optionsList" id="initial_base" onchange="handleSelectFromBase(this);" required=""> 
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+					</select>
+					To Base:
+					<select name="toBase" id="change_base" onchange="handleSelectToBase(this);" required=""> 
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+					</select> 
+					= 
+					<input type="text" name="result" size="30"  readonly=""> 
+				</form>
+			</div>
+
+			<div id="example">
+				<h4>Exemples</h4>
+				<p>2018 (base 10) = 11111100010 (base 2)</p>
+				<p>35914 (base 10) = 8c4a (base 16)</p>
+				<p>3a4f (base 16) = 11101001001111 (base 2)</p>
+			</div>
+		</div>	
+
+		<footer id="footer">
+			<span>
+				<p>
+					© Copyright 2018 Liliana Candrea. All rights reserved.
+				</p>
+				
+			</span>
+		</footer>		
+	</body>
+</html>
